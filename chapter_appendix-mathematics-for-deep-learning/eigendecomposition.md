@@ -402,19 +402,19 @@ so in particular, it points at least a little bit
 in the same direction as the eigenvector of $\mathbf{A}$
 associated with the largest eigenvalue.
 This is so important that it is called 
-the *principle eigenvalue* and *principle eigenvector*.
+the *principal eigenvalue* and *principal eigenvector*.
 After applying $\mathbf{A}$, our random vector 
 gets stretched in every possible direction,
 as is associated with every possible eigenvector,
 but it is stretched most of all in the direction 
-associated with this principle eigenvector.
+associated with this principal eigenvector.
 What this means is that after apply in $A$, 
 our random vector is longer, and points in a direction 
-closer to being aligned with the principle eigenvector.
+closer to being aligned with the principal eigenvector.
 After applying the matrix many times, 
-the alignment with the principle eigenvector becomes closer and closer until, 
+the alignment with the principal eigenvector becomes closer and closer until, 
 for all practical purposes, our random vector has been transformed 
-into the principle eigenvector!
+into the principal eigenvector!
 Indeed this algorithm is the basis 
 for what is known as the *power iteration*
 for finding the largest eigenvalue and eigenvector of a matrix.  For details see, for example, :cite:`Van-Loan.Golub.1983`.
@@ -424,7 +424,7 @@ for finding the largest eigenvalue and eigenvector of a matrix.  For details see
 Now, from above discussions, we concluded 
 that we do not want a random vector to be stretched or squished at all,
 we would like random vectors to stay about the same size throughout the entire process.
-To do so, we now rescale our matrix by this principle eigenvalue 
+To do so, we now rescale our matrix by this principal eigenvalue 
 so that the largest eigenvalue is instead now just one.
 Let's see what happens in this case.
 
@@ -457,7 +457,7 @@ d2l.plot(np.arange(1, 100), norm_ratio_list, 'Iteration', 'Ratio')
 ## Conclusions
 
 We now see exactly what we hoped for!
-After normalizing the matrices by the principle eigenvalue,
+After normalizing the matrices by the principal eigenvalue,
 we see that the random data does not explode as before,
 but rather eventually equilibrates to a specific value.
 It would be nice to be able to do these things from first principles,
